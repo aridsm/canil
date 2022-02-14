@@ -1,0 +1,230 @@
+@media all and (max-width: 920px) {
+    header {
+        height:60px;
+    }
+    .menu-mobile {
+        display: block;
+    }
+    header nav {
+        display: none;
+        position: absolute;
+        background-color: $cor-2;
+        top:60px;
+        left:0;
+        width:100%;
+        min-height: calc(100vh - 60px);
+        padding: 0 15px 30px 15px;
+        text-align: center;
+        ul {
+            height:100%;
+            flex-direction: column;
+        }
+        li {
+            width: 100%;
+            margin:0
+        }
+        a {
+            padding: 5px !important;
+            line-height: 35px;
+            height:50px;
+            width: 100%;
+            border-radius: 5px;
+            &:hover {
+                background: $cor-1
+            }
+        }
+    }
+    .js-nav-mobile.ativo{
+        display:block
+    }
+    .li-agende {
+        order: -2;
+    }
+
+    .link-agende, .link-adote {
+        margin:0;
+        font-size: 1.5rem;
+    }
+
+    .li-adote {
+        order: -1;
+margin-bottom: 20px
+    }
+    
+    li + li {
+        margin-top: 20px !important;
+    }
+    .caracteristicas {
+        ul {
+            flex-direction: column;
+        }
+        li + li {
+            margin-left: 0px;
+            padding-top: 30px;
+        }
+    }
+    .ajude {
+        .container-ajude {
+            flex-direction: column;
+        }
+        a + a {
+            margin-left: 0px;
+            padding-top: 30px;
+        }
+    }
+    .numeros {
+        .container{
+            flex-direction: column;
+            div + div {
+                margin-top: 30px;
+            }
+        }
+    }
+    .container-animais {
+        max-width: 640px;
+        margin:0 auto
+    }
+    
+    .header-animais {
+        flex-direction:column;
+        .botoes {
+        margin-top: 20px
+        }
+        h2 {
+            text-align: center;
+        }
+    }
+    .todos-os-animais {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .racas {
+        h2{
+            text-align: center;
+        }
+    }
+}
+
+@media all and (max-width: 1100px) {
+    .social-media {
+        flex-direction: row;
+        position:absolute;
+        top: 20px;
+        a + a {
+            margin-top: 0px;
+            margin-left: 10px;
+        }
+    }
+    .whatsapp {
+        display:none
+    }
+    .racas-caes {
+        margin-bottom: 00px;
+    }
+    .racas h3 {
+        right:0;
+        left:0;
+        margin:0 auto;
+        text-align: center;
+        position: relative;
+    }
+    .racas h2 {
+        margin-bottom: 0px;
+    }
+    .raca-infos {
+        max-width: 400px;
+    }
+    .racas-caes .raca-item:nth-of-type(even) {
+        margin-top:0px;
+        margin-bottom: 0px;
+    }
+    .racas-gatos .raca-item:nth-of-type(odd){
+        margin-top:0px;
+        margin-bottom: 0px;
+    }
+    .raca-item {
+        margin-top: 70px !important;
+    }
+}
+
+@media all and (max-width: 800px) {
+    h1 {
+        font-size: 3.75rem !important;
+        width: 300px
+    }
+    h1::after {
+        height: 30px;
+        background-size: contain;
+    }
+    .img-principal img {
+        width: 300px
+    }
+    .txt-principal {
+        margin-right: -100px;
+    }
+}
+
+@media all and(max-width: 700px) {
+    .container-animais {
+        max-width: 420px;
+    }
+    footer .row-1 {
+        flex-direction: column;
+        text-align: center;
+        margin:0 auto;
+        > div + div {
+            margin-left: 0px;
+            margin-top: 50px;
+        }
+        > div {
+            margin-left: auto !important;
+            margin-right: auto;
+            text-align: center;
+            width: 300px;
+        }
+    }
+}
+
+@media all and(max-width: 560px) {
+    .container-animais {
+        max-width: 200px;
+    }
+    .principal {
+        flex-direction: column;
+        height:initial;
+        padding-top: 70px;
+        padding-bottom: 140px;
+    }
+    .txt-principal {
+        margin-right: 0px;
+        margin-top: -30px;
+        order:2
+    }
+    .raca-item {
+        flex-direction: column;
+        text-align: center;
+        margin:70px auto 0 auto !important;
+        h4 {
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+    }
+
+    .img-raca {
+        order: 0 !important;
+        margin: 0 auto
+    }
+    .raca-infos {
+        margin:0 auto !important;
+        text-align: center !important
+    }
+    .sub-header {
+        font-size: 0.75rem;
+    }
+    footer {
+        font-size: 0.75rem;
+    }
+    .racas h3 {
+        font-size:5.625rem;
+    }
+}

@@ -1,0 +1,136 @@
+.animais {
+    background-color: #cd594c;
+    background-image: url("../img/snow.png");
+    color: $cor-3;
+    padding: 70px 0
+}
+
+.header-animais {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+    .botoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button {
+        opacity: 0.7;
+        font-size: 0.875rem;
+        @include transit;
+        &:hover {
+            opacity:1
+        }
+    }
+    }
+}
+
+.anterior::after {
+content: '';
+width: 1px;
+height: 10px;
+background-color: $cor-3;
+display:inline-block;
+margin: 0 7px;
+opacity: 0.5
+}
+
+.container-animais {
+    width: 100%;
+    overflow: hidden
+}
+
+.js-scroll-animais {
+    display:flex;
+}
+
+@keyframes anima-previous {
+     from {
+        margin-left:-220px;
+    } to {
+        margin-left:-10px;
+    }
+}
+
+
+@keyframes anima-next {
+    from {
+       margin-left:-10px;
+   } to {
+       margin-left:-230px;
+   }
+}
+.borda-card-animais {
+    border:2px dashed rgba(253, 230, 227, 0.25);
+    padding: 5px;
+    border-radius: 5px;
+    max-width: 200px;
+}
+
+.js-card {
+    padding:0 10px;
+}
+
+.js-card.anima-previous {
+    animation-name: anima-previous;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.js-card.anima-next {
+    animation-name: anima-next;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.js-card:first-of-type {
+    margin-left: -10px;
+}
+
+.item-animais {
+    background: #F7F2F2;
+    border-radius: 5px;
+    overflow: hidden;
+    color: $cor-4;
+    display:block
+}
+
+.nome-animal{
+text-align: center;
+padding: 5px 0;
+font-family: "Caveat Brush", serif;
+font-size: 1.25rem;
+background-color: $cor-2;
+color: $cor-3
+}
+
+.descricao-animais {
+    padding: 10px;
+    span {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        opacity:0.7;
+        font-size: 0.75rem;
+    }
+    .descricao {
+        margin: 15px 0
+    }
+}
+
+.raca {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.todos-os-animais {
+    margin-top: 45px;
+    color: $cor-3;
+    font-family: "Caveat Brush", serif;
+    font-size:1.25rem;
+    display:table;
+    margin-left: auto;
+}

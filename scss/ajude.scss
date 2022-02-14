@@ -1,0 +1,24 @@
+.ajude {
+    text-align: center;
+    margin: 100px 0;
+    .container-ajude {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70px
+    }
+    img {
+        width: 50px;
+    }
+    a {
+        display:block;
+        max-width: 100px;
+        @include transit;
+        &:hover {
+            color: $cor-1
+        }
+    }
+    a + a {
+        margin-left: 100px
+    }
+}

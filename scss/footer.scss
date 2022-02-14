@@ -1,0 +1,54 @@
+footer {
+    background-color: $cor-2;
+    color: $cor-3;
+    padding: 30px 0;
+    font-size: 0.875rem;
+    .row-1{
+        display:flex;
+        align-items: start;
+        > * {
+            flex:1
+        }
+        > div + div {
+            margin-left: 50px;
+        }
+    }
+}
+.menu {
+    p {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+    a {
+        display:block;
+    }
+    a + a {
+        margin-top: 5px;
+    }
+}
+
+.endereco-footer {
+    span {
+        display:block
+    }
+    span + span {
+        margin-top: 5px;
+    }
+}
+
+.redes-sociais {
+    i {
+        font-size: 25px;
+        margin-top: 10px
+    }
+    a + a {
+        margin-left: 10px;
+    }
+}
+
+.made-by {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top:2px dashed rgba(253, 230, 227, 0.25);
+}
