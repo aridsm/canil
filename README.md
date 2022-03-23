@@ -1,3 +1,7 @@
-# Rep
+# Canil (& catil)
+
+Projeto de landing page de um canil&catil.
+
+![página inicial](https://github.com/aridsm/Canil/blob/main/page.png)
  
-https://aridsm.github.io/Canil/
+Link: https://aridsm.github.io/Canil/
