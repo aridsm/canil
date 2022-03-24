@@ -9,8 +9,8 @@ Conta com seções de:
 - Mapa do "local" 
 - & mais!  
   
-**Acesse o website** : https://aridsm.github.io/Canil/  
+**Acesse o website** : https://aridsm.github.io/canil/  
   *Todas as informações deste website são fictícias*
 
-![página inicial](https://github.com/aridsm/Canil/blob/main/page.png)
+![página inicial](https://github.com/aridsm/canil/blob/main/page.png)
  
