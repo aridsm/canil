@@ -1,56 +1,65 @@
 .racas {
     margin: 100px auto;
+
     h2 {
         padding-bottom: 10px;
         margin-bottom: 70px;
-        border-bottom:2px dashed rgba(49, 54, 58, 0.25)
+        border-bottom: 2px dashed rgba(49, 54, 58, 0.25)
     }
+
     h3 {
-     position: absolute;
-     font-size:8.75rem;
-     opacity:0.15;
-     font-family: "Caveat Brush", serif;
-     font-weight: 400;
+        position: absolute;
+        font-size: 8.75rem;
+        opacity: 0.15;
+        font-family: "Caveat Brush", serif;
+        font-weight: 400;
     }
 }
 
 .racas-caes {
-position: relative;
-padding-bottom: 70px;
-margin-bottom: 70px;
-border-bottom:2px dashed rgba(49, 54, 58, 0.25);
-h3 {
-    right:0;
-    top:0px
-}
-.img-1 img{
-mask-image: url(../img/vetor1.png);
--webkit-mask-image: url(../img/vetor1.png);
-}
-.img-2 img{
-    mask-image: url(../img/vetor2.png);
-    -webkit-mask-image: url(../img/vetor2.png);
-}
-.img-3 img{
-    mask-image: url(../img/vetor3.png);
-    -webkit-mask-image: url(../img/vetor3.png);
-}
+    position: relative;
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+    border-bottom: 2px dashed rgba(49, 54, 58, 0.25);
+
+    h3 {
+        right: 0;
+        top: 0px
+    }
+
+    .img-1 img {
+        mask-image: url(../img/vetor1.webp);
+        -webkit-mask-image: url(../img/vetor1.webp);
+    }
+
+    .img-2 img {
+        mask-image: url(../img/vetor2.webp);
+        -webkit-mask-image: url(../img/vetor2.webp);
+    }
+
+    .img-3 img {
+        mask-image: url(../img/vetor3.webp);
+        -webkit-mask-image: url(../img/vetor3.webp);
+    }
 }
 
 .racas-gatos {
     position: relative;
-    .img-1 img{
-        mask-image: url(../img/vetor4.png);
-        -webkit-mask-image: url(../img/vetor4.png);
-        }
-        .img-2 img{
-            mask-image: url(../img/vetor5.png);
-            -webkit-mask-image: url(../img/vetor5.png);
-        }
+
+    .img-1 img {
+        mask-image: url(../img/vetor4.webp);
+        -webkit-mask-image: url(../img/vetor4.webp);
+    }
+
+    .img-2 img {
+        mask-image: url(../img/vetor5.webp);
+        -webkit-mask-image: url(../img/vetor5.webp);
+    }
 }
 
-.mask-img img{
+.mask-img img {
     width: 220px;
+    height: auto;
     -webkit-mask-size: contain;
     mask-size: contain;
     -webkit-mask-repeat: no-repeat;
@@ -60,14 +69,15 @@ mask-image: url(../img/vetor1.png);
 .raca-item {
     display: flex;
     align-items: flex-start;
-    width:fit-content;
-    -webkit-width:fit-content;
-    -moz-width:fit-content;
+    width: fit-content;
+    -webkit-width: fit-content;
+    -moz-width: fit-content;
 }
 
 .raca-infos {
     max-width: 200px;
-    margin-left:20px;
+    margin-left: 20px;
+
     h4 {
         color: $cor-3;
         background-color: $cor-1;
@@ -81,43 +91,50 @@ mask-image: url(../img/vetor1.png);
         font-weight: 400;
     }
 
-    > p {
+    >p {
         margin: 20px 0
     }
+
     span {
-        display:block;
+        display: block;
         opacity: 0.7
     }
 }
 
 .racas-caes .raca-item:nth-of-type(even) {
     margin: -50px 0 -50px auto;
+
     .raca-infos {
         margin-left: 0;
         margin-right: 20px;
         text-align: right;
     }
+
     h4 {
         background-color: $cor-2;
         margin-left: auto;
     }
+
     .img-raca {
         order: 2
     }
 }
 
 .racas-gatos .raca-item:nth-of-type(odd) {
-    margin-left:auto;
+    margin-left: auto;
     margin-bottom: -50px;
+
     .raca-infos {
         margin-left: 0;
         margin-right: 20px;
         text-align: right;
     }
+
     h4 {
         background-color: $cor-2;
         margin-left: auto;
     }
+
     .img-raca {
         order: 2
     }

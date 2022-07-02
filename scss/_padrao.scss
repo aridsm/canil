@@ -1,13 +1,13 @@
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-$cor-1:#CD594C;
-$cor-2:#AA3D31;
-$cor-3:#FFE8E5;
-$cor-4:#31363a;
+$cor-1: #CD594C;
+$cor-2: #AA3D31;
+$cor-3: #FFE8E5;
+$cor-4: #31363a;
 
 
 @mixin transit {
@@ -16,21 +16,25 @@ $cor-4:#31363a;
 
 body {
     background: #F7F2F2;
-    background-image: url("../img/snow.png");
+    background-image: url("../img/snow.webp");
     font-family: 'Source Sans Pro', sans-serif;
-    color:$cor-4;
+    color: $cor-4;
 }
+
 .container {
     max-width: 890px;
     margin: 0 auto;
-    padding:0 15px
+    padding: 0 15px
 }
+
 ul {
-    padding:0
+    padding: 0
 }
+
 li {
     list-style: none;
 }
+
 a {
     display: inline-block;
     text-decoration: none;
@@ -40,12 +44,12 @@ a {
 }
 
 button {
-    display:block;
-    background:transparent;
-    border:none;
+    display: block;
+    background: transparent;
+    border: none;
     border-radius: 0;
-    cursor:pointer;
-    color:inherit;
+    cursor: pointer;
+    color: inherit;
     font-size: inherit;
     font-family: inherit;
 }
@@ -58,20 +62,20 @@ h2 {
 
 ::-webkit-scrollbar {
     width: 12px;
-  }
+}
 
 ::-webkit-scrollbar-track {
-background:#F7F2F2;
+    background: #F7F2F2;
 }
 
 ::-webkit-scrollbar-thumb {
-background: $cor-1;
-border:2px solid $cor-3;
-border-radius: 6px;
+    background: $cor-1;
+    border: 2px solid $cor-3;
+    border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-background: $cor-2;
+    background: $cor-2;
 }
 
 ::selection {
@@ -80,11 +84,12 @@ background: $cor-2;
 }
 
 .js-scroll {
-    opacity:0;
-    transform:translateY(-30px);
+    opacity: 0;
+    transform: translateY(-30px);
     transition: all 0.5s ease
 }
+
 .js-scroll.anima-scroll {
-    transform:translateY(0px);
-    opacity:1;
+    transform: translateY(0px);
+    opacity: 1;
 }

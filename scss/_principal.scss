@@ -1,11 +1,12 @@
 .img-principal img {
-mask-image: url(../img/vetorcc.png);
--webkit-mask-image: url(../img/vetorcc.png);
-width: 400px;
--webkit-mask-size: contain;
-mask-size: contain;
--webkit-mask-repeat: no-repeat;
-mask-repeat: no-repeat;
+    mask-image: url(../img/vetorcc.webp);
+    -webkit-mask-image: url(../img/vetorcc.webp);
+    width: 400px;
+    height: auto;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
 }
 
 .principal {
@@ -26,14 +27,15 @@ h1 {
 }
 
 h1::after {
-    content:'';
+    content: '';
     width: 100%;
     height: 50px;
-    background: url(../img/detalhe.png);
+    background: url(../img/detalhe.webp);
     background-repeat: no-repeat;
     background-position: right;
-    display:block
+    display: block
 }
+
 .txt-principal {
     margin-right: -200px;
     z-index: 2;
@@ -41,20 +43,24 @@ h1::after {
     margin-top: -60px;
     font-family: "Caveat Brush", serif;
     color: $cor-2;
+
     a {
-        margin:0 auto;
-        display:table;
+        margin: 0 auto;
+        display: table;
         font-size: 1.5rem;
     }
 }
+
 .social-media {
     position: absolute;
     left: 15px;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    a + a {
+
+    a+a {
         margin-top: 10px;
     }
+
     i {
         font-size: 25px;
         color: $cor-2
@@ -62,8 +68,8 @@ h1::after {
 }
 
 .whatsapp {
-    transform:rotate(90deg);
-    color:$cor-2;
+    transform: rotate(90deg);
+    color: $cor-2;
     position: absolute;
     right: -35px
 }

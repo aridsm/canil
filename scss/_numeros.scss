@@ -1,25 +1,29 @@
 .numeros {
     background-color: #cd594c;
-    background-image: url("../img/snow.png");
+    background-image: url("../img/snow.webp");
     padding: 45px 0;
     color: $cor-3;
     font-family: "Caveat Brush", serif;
+
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         div {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        p {
-            max-width: 100px;
-            font-size: 1.5rem;
-        }
-        span {
-            font-size: 5.625rem;
-            margin-right: 15px
-        }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                max-width: 100px;
+                font-size: 1.5rem;
+            }
+
+            span {
+                font-size: 5.625rem;
+                margin-right: 15px
+            }
         }
     }
 }
