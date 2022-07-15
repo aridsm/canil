@@ -1,7 +1,7 @@
 .animais {
-    background-color: #cd594c;
+    background-color: $cor-1;
     background-image: url("../img/snow.webp");
-    color: $cor-3;
+    color: $cor-5;
     padding: 70px 0
 }
 
@@ -32,7 +32,7 @@
     content: '';
     width: 1px;
     height: 10px;
-    background-color: $cor-3;
+    background-color: $cor-5;
     display: inline-block;
     margin: 0 7px;
     opacity: 0.5
@@ -40,73 +40,56 @@
 
 .container-animais {
     width: 100%;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .js-scroll-animais {
-    display: flex;
+    display: grid;
+    grid-auto-columns: 23%;
+    grid-auto-flow: column;
+    grid-template-rows: auto;
+    width: 100%;
+    grid-gap: 2.66%;
+    transition: .5s ease-in-out;
+    transform: translateX(0);
+    cursor: grab;
 }
 
-@keyframes anima-previous {
-    from {
-        margin-left: -220px;
+.card {
+    width: 100%;
+    @include transit;
+
+    &:hover {
+        transform: translateX(-5px);
     }
 
-    to {
-        margin-left: -10px;
+    .borda-card-animais {
+        border: 2px dashed $cor-8;
+        padding: 5px;
+        border-radius: 5px;
+        width: 100%;
+        height: 100%
     }
 }
 
-
-@keyframes anima-next {
-    from {
-        margin-left: -10px;
-    }
-
-    to {
-        margin-left: -230px;
-    }
-}
-
-.borda-card-animais {
-    border: 2px dashed rgba(253, 230, 227, 0.25);
-    padding: 5px;
-    border-radius: 5px;
-    max-width: 200px;
-}
-
-.js-card {
-    padding: 0 10px;
-}
-
-.js-card.anima-previous {
-    animation-name: anima-previous;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-}
-
-.js-card.anima-next {
-    animation-name: anima-next;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-}
-
-.js-card:first-of-type {
-    margin-left: -10px;
-}
 
 .item-animais {
-    background: #F7F2F2;
+    background: $cor-5;
     border-radius: 5px;
     overflow: hidden;
     color: $cor-4;
     display: block;
+    height: 100%;
 
-    img {
-        width: 200px;
-        height: auto;
+    .img {
+        width: 100%;
+        height: 10rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }
 
@@ -116,7 +99,7 @@
     font-family: "Caveat Brush", serif;
     font-size: 1.25rem;
     background-color: $cor-2;
-    color: $cor-3
+    color: $cor-5
 }
 
 .descricao-animais {
@@ -143,7 +126,7 @@
 
 .todos-os-animais {
     margin-top: 45px;
-    color: $cor-3;
+    color: $cor-5;
     font-family: "Caveat Brush", serif;
     font-size: 1.25rem;
     display: table;

@@ -8,65 +8,55 @@
     <meta name="description" content="Canil Pets">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Pets - Página inicial</title>
 </head>
 
 <body>
-    <div class="sub-header">
-        <span class="endereco">Rua Lorem 123 - Ipsum</span>
-        <div>
-            <span class="wtsp">+55 (00) 1234-5678</span>
-            <a href="#">Faça uma doação</a>
+    <header class="js-header">
+        <div class="container">
+            <span class="logo">Pets</span>
+            <nav class="js-nav-mobile">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Raças</a></li>
+                    <li><a href="#">Nossos animais</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Agende sua visita</a></li>
+                    <li><a href="#">Faça uma doaçao</a></li>
+                    <li><a href="#" class="btn-padrao">Adote</a></li>
+                </ul>
+            </nav>
+            <button class="menu-mobile js-menu-mobile" aria-label="abrir menu">
+                <div class="barra-menu"></div>
+            </button>
         </div>
-    </div>
-    <header>
-        <span class="logo">Pets</span>
-        <nav class="js-nav-mobile">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Raças</a></li>
-                <li><a href="#">Nossos animais</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
-                <li class="li-agende"><a href="#" class="link-agende">Agende sua visita</a></li>
-                <li class="li-adote"><a href="#" class="link-adote">Adote</a></li>
-            </ul>
-        </nav>
-        <button class="menu-mobile js-menu-mobile" aria-label="abrir menu">
-            <div class="barra-menu"></div>
-        </button>
     </header>
     <section class="principal">
         <div class="txt-principal">
-            <h1>Lorem ipsum dolor sit amet</h1>
-            <a href="#">Adote um animal!</a>
+            <h1>Lorem <span>ipsum</span> dolor</h1>
+            <p>Praesent pellentesque diam sit amet dolor facilisis interdum</p>
+            <a href="#" class="btn-padrao">Adote um pet!</a>
+            <div id="ball-1" class="balls"></div>
+            <div id="ball-2" class="balls"></div>
+            <div id="ball-3" class="balls"></div>
         </div>
-
-        <div class="img-principal">
-            <img src="img/principal.webp" alt="Cachorros" class="js-scroll">
-        </div>
-        <div class="social-media">
-            <a href="#"><i class="fab fa-instagram-square"></i></a>
-            <a href="#"><i class="fab fa-youtube-square"></i></a>
-            <a href="#"><i class="fab fa-facebook-square"></i></a>
-        </div>
-        <div class="whatsapp">+55 (00) 1234-5678</div>
     </section>
     <section class="caracteristicas">
         <ul>
-            <li><img src="img/carac1.webp" alt="" class="js-scroll">
+            <li><img src="img/carac1.png" alt="" class="js-scroll">
                 <p>Save uma vida e tenha um novo amigo!</p>
             </li>
-            <li><img src="img/carac2.webp" alt="" class="js-scroll">
+            <li><img src="img/carac2.png" alt="" class="js-scroll">
                 <p>Animais vacinados e vermifugados</p>
             </li>
-            <li><img src="img/carac3.webp" alt="" class="js-scroll">
+            <li><img src="img/carac3.png" alt="" class="js-scroll">
                 <p>Todos os pets livres de parasitas</p>
             </li>
         </ul>
-        <a href="#">Agende uma visita</a>
+        <a href="#" class="btn-borda">Agende uma visita</a>
     </section>
     <section class="racas container">
         <h2>Nossas raças</h2>
@@ -153,141 +143,22 @@
             </div>
             <div class="container-animais">
                 <div class="js-scroll-animais">
-                    <div class="js-card">
-                        <div class="borda-card-animais">
-                            <a class="item-animais" href="#">
-                                <p class="nome-animal">Pluto</p>
-                                <img src="img/anima1.webp" alt="Pluto">
-                                <div class="descricao-animais">
-                                    <span>
-                                        <p class="raca">SRD</p>
-                                        <p>Macho</p>
-                                    </span>
-                                    <p class="descricao">Etiam sit amet nunc sed mauris laoreet molestie in id eros.</p>
-                                    <span>
-                                        <p>Idade</p>
-                                        <p>2 anos</p>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="js-card">
-                        <div class="borda-card-animais">
-                            <a class="item-animais" href="#">
-                                <p class="nome-animal">Max</p>
-                                <img src="img/anima2.webp" alt="Pluto">
-                                <div class="descricao-animais">
-                                    <span>
-                                        <p class="raca">Pit Bull Terrier</p>
-                                        <p>Macho</p>
-                                    </span>
-                                    <p class="descricao">Donec libero magna, finibus sit amet egestas eu, congue vitae justo.</p>
-                                    <span>
-                                        <p>Idade</p>
-                                        <p>2 anos</p>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="js-card">
-                        <div class="borda-card-animais">
-                            <a class="item-animais" href="#">
-                                <p class="nome-animal">Polly</p>
-                                <img src="img/anima3.webp" alt="Pluto">
-                                <div class="descricao-animais">
-                                    <span>
-                                        <p class="raca">SRD</p>
-                                        <p>Fêmea</p>
-                                    </span>
-                                    <p class="descricao">Pellentesque tortor tellus, pulvinar quis egestas sit amet.</p>
-                                    <span>
-                                        <p>Idade</p>
-                                        <p>3 meses</p>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="js-card">
-                        <div class="borda-card-animais">
-                            <a class="item-animais" href="#">
-                                <p class="nome-animal">Lili</p>
-                                <img src="img/anima4.webp" alt="Pluto">
-                                <div class="descricao-animais">
-                                    <span>
-                                        <p class="raca">SRD</p>
-                                        <p>Fêmea</p>
-                                    </span>
-                                    <p class="descricao">Quisque egestas vulputate lectus sit amet ultricies.</p>
-                                    <span>
-                                        <p>Idade</p>
-                                        <p>1 ano</p>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="js-card">
-                        <div class="borda-card-animais">
-                            <a class="item-animais" href="#">
-                                <p class="nome-animal">Zayn</p>
-                                <img src="img/anima5.webp" alt="Zayn">
-                                <div class="descricao-animais">
-                                    <span>
-                                        <p class="raca">SRD</p>
-                                        <p>Macho</p>
-                                    </span>
-                                    <p class="descricao">Quisque egestas vulputate lectus sit amet ultricies.</p>
-                                    <span>
-                                        <p>Idade</p>
-                                        <p>3 meses</p>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="js-card">
-                        <div class="borda-card-animais">
-                            <a class="item-animais" href="#">
-                                <p class="nome-animal">Millie</p>
-                                <img src="img/anima6.webp" alt="Millie">
-                                <div class="descricao-animais">
-                                    <span>
-                                        <p class="raca">Labrador Retriever</p>
-                                        <p>Fêmea</p>
-                                    </span>
-                                    <p class="descricao">Quisque egestas vulputate lectus sit amet ultricies.</p>
-                                    <span>
-                                        <p>Idade</p>
-                                        <p>3 meses</p>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
+                    <!--Aqui irao os cards de cada animal-->
                 </div>
             </div>
-            <a href="#" class="todos-os-animais">Todos os animais</a>
+            <a href="#" class="todos-os-animais btn-borda">Todos os animais</a>
         </div>
     </section>
     <section class="ajude">
         <h2>Não pode adotar no momento?</h2>
         <div class="container-ajude">
             <a href="#">
-                <img src="img/ajude1.webp" alt="" class="js-scroll">
+                <img src="img/ajude1.png" alt="" class="js-scroll">
                 <p>Faça uma doação</p>
             </a>
 
             <a href="#">
-                <img src="img/ajude2.webp" alt="" class="js-scroll">
+                <img src="img/ajude2.png" alt="" class="js-scroll">
                 <p>Faça-nos uma visita</p>
             </a>
         </div>
@@ -326,9 +197,8 @@
                     </nav>
                 </div>
                 <div>
-                    <a href="https://www.flaticon.com/free-icons/owner" title="owner icons">Owner icons created by deemakdaksina - Flaticon</a>
-                    <a href="https://www.flaticon.com/free-icons/insect" title="insect icons">Insect icons created by Freepik - Flaticon</a>
-                    <a href="https://www.flaticon.com/free-icons/donation" title="donation icons">Donation icons created by photo3idea_studio - Flaticon</a>
+                    <a href="https://www.flaticon.com/free-icons/organ-donation" title="organ donation icons">Organ donation icons created by IconBaandar - Flaticon</a>
+                    <a href="https://www.flaticon.com/free-icons/maps-and-location" title="maps and location icons">Maps and location icons created by alimasykurm - Flaticon</a>
                 </div>
                 <div class="endereco-footer">
                     <span>Rua Lorem 123</span>
@@ -345,11 +215,11 @@
                 </div>
             </div>
             <div class="made-by">
-                Website made by <a href="https://github.com/aridsm">Ariane Morelato</a>
+                Projeto feito por <a href="https://github.com/aridsm">Ariane Morelato</a>
             </div>
         </div>
     </footer>
-    <script src="script.min.js"></script>
+    <script src="./js/script.js" type="module"></script>
 </body>
 
 </html>

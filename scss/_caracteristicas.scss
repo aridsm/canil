@@ -1,5 +1,9 @@
 .caracteristicas {
     text-align: center;
+    background-color: $cor-1;
+    padding: 3rem 0;
+    color: $cor-5;
+    background-image: url('../img//snow.webp');
 
     ul {
         display: flex;
@@ -22,19 +26,6 @@
     }
 
     a {
-        padding: 6px 20px;
-        font-family: "Caveat Brush", serif;
-        font-size: 1.25rem;
-        border-radius: 5px;
-        border: 2px dashed $cor-1;
-        color: $cor-1;
-        background: rgba(205, 89, 76, 0.1);
         margin-top: 70px;
-
-        &:hover {
-            border: 2px dashed $cor-2;
-            color: $cor-2;
-            background: rgba(170, 61, 49, 0.1)
-        }
     }
 }
