@@ -40,6 +40,14 @@
         left: 90%;
         top: 65%
     }
+
+    #ball-4 {
+        width: 1.6rem;
+        height: 1.6rem;
+        background-color: $cor-1;
+        left: 60%;
+        top: 7%
+    }
 }
 
 .txt-principal {
@@ -63,7 +71,8 @@
         letter-spacing: -5px;
 
         span {
-            color: $cor-1
+            color: $cor-1;
+            animation: animaColor 10s infinite forwards;
         }
     }
 
@@ -74,11 +83,15 @@
         color: $cor-6;
     }
 
-    50% {
+    33% {
         color: $cor-7
     }
 
-    100% {
+    66% {
         color: $cor-1
+    }
+
+    100% {
+        color: $cor-6
     }
 }

@@ -54,10 +54,10 @@ function slider() {
   let totalSlideItems = containerAnimais.children.length;
   let itemWidth = containerAnimais.firstElementChild.offsetWidth;
   let gapBetweenItems = +getComputedStyle(containerAnimais)['grid-column-gap'].replace('%', '');
-  const slideWidth = itemWidth + containerAnimais.offsetWidth * gapBetweenItems / 100;
   let currentSlide = 0;
 
   function setPositionSlide() {
+    const slideWidth = itemWidth + containerAnimais.offsetWidth * gapBetweenItems / 100;
     containerAnimais.style.transform = `translateX(-${slideWidth * currentSlide + 'px'})`;
   }
 
@@ -77,16 +77,33 @@ function slider() {
     setPositionSlide();
   }
 
-  function dragSlide(e) {
-    console.log(e.x)
+  let inicioDragX;
+  let atualDragX;
+  let final_X = 0;
+  let distanceDragged;
+
+  function draggingSlider(e) {
+    if (e.x === 0) return;
+    atualDragX = e.x;
+    distanceDragged = atualDragX - inicioDragX;
+    containerAnimais.style.transform = `translateX(${(distanceDragged + final_X) + 'px'})`;
+  }
+
+  function startDrag(e) {
+    inicioDragX = e.x
+  }
+
+  function endDrag(e) {
+    final_X = distanceDragged;
   }
 
   btnAnterior.addEventListener('click', previousSlide)
   btnProximo.addEventListener('click', nextSlide)
-  containerAnimais.addEventListener('dragstart', dragSlide)
-  containerAnimais.addEventListener('dragend', dragSlide)
-}
 
+  containerAnimais.addEventListener('dragstart', startDrag)
+  containerAnimais.addEventListener('drag', draggingSlider)
+  containerAnimais.addEventListener('dragend', endDrag)
+}
 slider()
 
 
@@ -133,16 +150,19 @@ function numeroScroll() {
 window.addEventListener('scroll', numeroScroll)
 
 
-function updateHeaderScrolled() {
-  const header = document.querySelector('.js-header')
-  const pageScrolled = window.scrollY;
+function scrollHeader() {
+  function updateHeaderScrolled() {
+    const header = document.querySelector('.js-header')
+    const pageScrolled = window.scrollY;
 
-  if (pageScrolled > 0) {
-    header.classList.add('scrolled')
-  } else {
-    header.classList.remove('scrolled')
+    if (pageScrolled > 0) {
+      header.classList.add('scrolled')
+    } else {
+      header.classList.remove('scrolled')
+    }
+
   }
 
+  window.addEventListener('scroll', updateHeaderScrolled)
 }
-
-window.addEventListener('scroll', updateHeaderScrolled)
+scrollHeader()
