@@ -44,13 +44,17 @@ footer {
 }
 
 .redes-sociais {
-    i {
-        font-size: 25px;
-        margin-top: 10px
+    span {
+        display: block;
+        margin-top: 1rem;
     }
 
     a+a {
         margin-left: 10px;
+    }
+
+    img {
+        width: 1.5rem;
     }
 }
 

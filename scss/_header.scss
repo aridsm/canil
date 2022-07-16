@@ -26,14 +26,19 @@ header {
         border-bottom-right-radius: .2rem;
     }
 
-    nav ul {
+    nav>ul {
         display: flex;
-        align-items: stretch;
         height: 4rem;
         padding: .7rem
     }
 
-    a {
+    .dropdown-item,
+    .lista-menu {
+        position: relative;
+    }
+
+    .lista-menu>li>a,
+    .lista-menu>.dropdown-item>button {
         padding: 6px 15px;
         @include transit;
         height: 100%;
@@ -41,7 +46,39 @@ header {
         place-items: center;
     }
 
-    li+li {
+    .dropdown-btn:hover~.dropdown-lista,
+    .dropdown-lista:hover {
+        display: flex;
+    }
+
+    .dropdown-lista {
+        position: absolute;
+        background: $cor-4;
+        color: $cor-5;
+        border-radius: .2rem;
+        display: none;
+        flex-direction: column;
+        min-width: 9rem;
+        text-align: center;
+        margin-top: -1px;
+    }
+
+    .dropdown-item a,
+    .sub-btn {
+        width: 100%;
+        padding: 1rem;
+
+        &:hover {
+            background: $cor-1;
+        }
+    }
+
+    .lista-racas-menu {
+        left: 100%;
+        top: 0
+    }
+
+    .lista-menu>li+li {
         margin-left: 5px
     }
 

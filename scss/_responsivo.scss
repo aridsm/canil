@@ -111,6 +111,12 @@
             text-align: center;
         }
     }
+
+
+    .js-scroll-animais {
+        grid-auto-columns: 30%;
+        grid-gap: 5%;
+    }
 }
 
 @media all and (max-width: 1100px) {
@@ -181,6 +187,11 @@
             width: 300px;
         }
     }
+
+    .js-scroll-animais {
+        grid-auto-columns: 45%;
+        grid-gap: 10%;
+    }
 }
 
 @media all and(max-width: 560px) {
@@ -215,5 +226,10 @@
 
     .racas h3 {
         font-size: 5.625rem;
+    }
+
+    .js-scroll-animais {
+        grid-auto-columns: 99%;
+        grid-gap: 1%;
     }
 }

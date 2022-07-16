@@ -14,6 +14,7 @@ menu()
 
 function loadCardsAnimais() {
   const containerAnimais = document.querySelector('.js-scroll-animais');
+
   animais.forEach(animal => createCardAnimal(animal))
 
   function createCardAnimal(animal) {
@@ -50,14 +51,14 @@ function slider() {
   const btnAnterior = document.querySelector('.js-btn-anterior');
   const btnProximo = document.querySelector('.js-btn-proximo');
   const containerAnimais = document.querySelector('.js-scroll-animais');
-  let slidesPerPage = 4;
+  let slidesPerPage;
   let totalSlideItems = containerAnimais.children.length;
-  let itemWidth = containerAnimais.firstElementChild.offsetWidth;
-  let gapBetweenItems = +getComputedStyle(containerAnimais)['grid-column-gap'].replace('%', '');
-  const slideWidth = itemWidth + containerAnimais.offsetWidth * gapBetweenItems / 100;
   let currentSlide = 0;
 
   function setPositionSlide() {
+    let itemWidth = containerAnimais.firstElementChild.offsetWidth;
+    let gapBetweenItems = +getComputedStyle(containerAnimais)['grid-column-gap'].replace('%', '');
+    const slideWidth = itemWidth + containerAnimais.offsetWidth * gapBetweenItems / 100;
     containerAnimais.style.transform = `translateX(-${slideWidth * currentSlide + 'px'})`;
   }
 
@@ -79,14 +80,13 @@ function slider() {
 
   let inicio_X;
   let atual_X;
-  let final_X = 0;
+  let final_X;
   let distanceDragged;
 
   function draggingSlider(e) {
     if (e.x === 0) return;
     atual_X = e.x;
     distanceDragged = atual_X - inicio_X;
-    console.log(distanceDragged)
   }
 
   function startDrag(e) {
@@ -102,9 +102,25 @@ function slider() {
     }
   }
 
+  function setSlidesPerPage() {
+    if (window.innerWidth <= 560) {
+      slidesPerPage = 1
+    } else if (window.innerWidth <= 700) {
+      slidesPerPage = 2
+    }
+    else if (window.innerWidth <= 920) {
+      slidesPerPage = 3;
+    } else {
+      slidesPerPage = 4
+    }
+    console.log(slidesPerPage)
+  }
+  setSlidesPerPage()
+
   btnAnterior.addEventListener('click', previousSlide)
   btnProximo.addEventListener('click', nextSlide)
 
+  window.addEventListener('resize', setSlidesPerPage)
   containerAnimais.addEventListener('dragstart', startDrag)
   containerAnimais.addEventListener('drag', draggingSlider)
   containerAnimais.addEventListener('dragend', endDrag)
@@ -152,6 +168,7 @@ function numeroScroll() {
     window.removeEventListener('scroll', numeroScroll)
   }
 }
+
 window.addEventListener('scroll', numeroScroll)
 
 function scrollHeader() {
@@ -166,7 +183,7 @@ function scrollHeader() {
     }
 
   }
-
+  updateHeaderScrolled()
   window.addEventListener('scroll', updateHeaderScrolled)
 }
 scrollHeader()

@@ -86,7 +86,7 @@
     p {
         text-align: left;
         width: 100%;
-        opacity: .6;
+        opacity: .8;
     }
 
     ul {
@@ -99,7 +99,7 @@
         }
 
         a {
-            opacity: .3;
+            opacity: .5;
             @include transit;
 
             &:hover {
@@ -114,7 +114,7 @@
 }
 
 .endereco {
-    opacity: .6;
+    opacity: .8;
     position: absolute;
     right: 10%;
     bottom: 7%;
