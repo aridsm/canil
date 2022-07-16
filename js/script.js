@@ -54,10 +54,10 @@ function slider() {
   let totalSlideItems = containerAnimais.children.length;
   let itemWidth = containerAnimais.firstElementChild.offsetWidth;
   let gapBetweenItems = +getComputedStyle(containerAnimais)['grid-column-gap'].replace('%', '');
+  const slideWidth = itemWidth + containerAnimais.offsetWidth * gapBetweenItems / 100;
   let currentSlide = 0;
 
   function setPositionSlide() {
-    const slideWidth = itemWidth + containerAnimais.offsetWidth * gapBetweenItems / 100;
     containerAnimais.style.transform = `translateX(-${slideWidth * currentSlide + 'px'})`;
   }
 
@@ -77,24 +77,29 @@ function slider() {
     setPositionSlide();
   }
 
-  let inicioDragX;
-  let atualDragX;
+  let inicio_X;
+  let atual_X;
   let final_X = 0;
   let distanceDragged;
 
   function draggingSlider(e) {
     if (e.x === 0) return;
-    atualDragX = e.x;
-    distanceDragged = atualDragX - inicioDragX;
-    containerAnimais.style.transform = `translateX(${(distanceDragged + final_X) + 'px'})`;
+    atual_X = e.x;
+    distanceDragged = atual_X - inicio_X;
+    console.log(distanceDragged)
   }
 
   function startDrag(e) {
-    inicioDragX = e.x
+    inicio_X = e.x
   }
 
-  function endDrag(e) {
+  function endDrag() {
     final_X = distanceDragged;
+    if (distanceDragged > 0) {
+      previousSlide()
+    } else {
+      nextSlide()
+    }
   }
 
   btnAnterior.addEventListener('click', previousSlide)
@@ -148,7 +153,6 @@ function numeroScroll() {
   }
 }
 window.addEventListener('scroll', numeroScroll)
-
 
 function scrollHeader() {
   function updateHeaderScrolled() {

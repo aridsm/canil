@@ -65,36 +65,16 @@ h2 {
     font-weight: 400;
 }
 
-::-webkit-scrollbar {
-    width: 10px;
+address {
+    font-style: normal;
 }
 
-::-webkit-scrollbar-track {
-    background: $cor-3;
-}
-
-::-webkit-scrollbar-thumb {
-    background: $cor-1;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: $cor-2;
-}
-
-::selection {
-    background: $cor-7;
-    color: $cor-5
-}
-
-.js-scroll {
-    opacity: 0;
-    transform: translateY(-30px);
-    transition: all 0.5s ease
-}
-
-.js-scroll.anima-scroll {
-    transform: translateY(0px);
-    opacity: 1;
+.container-geral {
+    overflow: hidden;
+    background-image: url('../img/lin2.svg'), url('../img/lin1.svg');
+    background-repeat: no-repeat;
+    background-position: top left, top right;
+    background-size: 30%;
 }
 
 .btn-padrao {
@@ -125,23 +105,38 @@ h2 {
     }
 }
 
-
-.btn-padra {
-    background: rgba(182, 65, 65, 0.1);
-    padding: .4rem 1.5rem;
-    color: $cor-1;
-    border-radius: .2rem;
-    letter-spacing: .8px;
-    border: 2px dashed $cor-1;
-    font-family: 'Caveat Brush';
-    @include transit;
-    font-size: 1.2rem;
-
-    &:hover {
-        transform: rotate(5deg);
-    }
-}
-
 iframe {
     display: block;
+}
+
+.js-scroll {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: all 0.5s ease
+}
+
+.js-scroll.anima-scroll {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: $cor-3;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $cor-1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $cor-2;
+}
+
+::selection {
+    background: $cor-7;
+    color: $cor-5
 }

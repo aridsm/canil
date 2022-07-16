@@ -1,14 +1,14 @@
 @media all and (max-width: 920px) {
-    header {
-        height: 60px;
+    .principal h1 {
+        font-size: 4rem;
     }
 
     .menu-mobile {
         display: block;
     }
 
-    header nav {
-        display: none;
+    .js-nav-mobile {
+        transform: translateX(100vw);
         position: absolute;
         background-color: $cor-2;
         top: 60px;
@@ -17,6 +17,8 @@
         min-height: calc(100vh - 60px);
         padding: 0 15px 30px 15px;
         text-align: center;
+        transition: 1.5s;
+        color: $cor-5;
 
         ul {
             height: 100%;
@@ -42,7 +44,8 @@
     }
 
     .js-nav-mobile.ativo {
-        display: block
+        transform: translateX(0);
+
     }
 
     li+li {
@@ -111,6 +114,14 @@
 }
 
 @media all and (max-width: 1100px) {
+    .principal {
+        background-position: 3% 20%, 15% 75%, 97% 20%, 85% 75%;
+        background-size: 120px, 120px, 120px, 120px;
+
+        #ball-3 {
+            top: 45%
+        }
+    }
 
     .racas-caes {
         margin-bottom: 00px;
@@ -147,21 +158,6 @@
     }
 }
 
-@media all and (max-width: 800px) {
-    h1 {
-        font-size: 3.75rem !important;
-        width: 300px
-    }
-
-    h1::after {
-        height: 30px;
-        background-size: contain;
-    }
-
-    .txt-principal {
-        margin-right: -100px;
-    }
-}
 
 @media all and(max-width: 700px) {
     .container-animais {
@@ -192,13 +188,6 @@
         max-width: 200px;
     }
 
-    .principal {
-        flex-direction: column;
-        height: initial;
-        padding-top: 70px;
-        padding-bottom: 140px;
-    }
-
     .raca-item {
         flex-direction: column;
         text-align: center;
@@ -218,10 +207,6 @@
     .raca-infos {
         margin: 0 auto !important;
         text-align: center !important
-    }
-
-    .sub-header {
-        font-size: 0.75rem;
     }
 
     footer {

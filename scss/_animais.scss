@@ -53,16 +53,11 @@
     transition: .5s ease-in-out;
     transform: translateX(0);
     cursor: grab;
-    border: 1px solid yellow
 }
 
 .card {
     width: 100%;
     @include transit;
-
-    &:hover {
-        transform: translateX(-5px);
-    }
 
     .borda-card-animais {
         border: 2px dashed $cor-8;

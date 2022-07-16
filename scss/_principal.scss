@@ -5,11 +5,11 @@
     align-items: center;
     min-height: calc(100vh - 4rem);
     padding: 4rem 0;
-    background-image: url('../img/img-bg-1.webp'), url('../img/img-bg-2.webp'), url('../img/img-bg-3.webp'), url('../img/img-bg-4.webp'), url('../img/lin2.svg'), url('../img/lin1.svg');
+    background-image: url('../img/img-bg-1.webp'), url('../img/img-bg-2.webp'), url('../img/img-bg-3.webp'), url('../img/img-bg-4.webp');
     background-repeat: no-repeat;
-    background-position: 10% 20%, 20% 75%, 90% 20%, 80% 75%, left, right;
-    background-size: 150px, 150px, 150px, 150px, 30%, 30%;
-
+    background-position: 10% 20%, 20% 75%, 90% 20%, 80% 75%;
+    background-size: 150px, 150px, 150px, 150px;
+    margin-top: 4rem;
 
     .balls {
         border-radius: 50%;
@@ -72,10 +72,60 @@
 
         span {
             color: $cor-1;
-            animation: animaColor 10s infinite forwards;
+            //   animation: animaColor 10s infinite forwards;
         }
     }
 
+}
+
+.redes-sociais-home {
+    position: absolute;
+    bottom: 7%;
+    left: 10%;
+
+    p {
+        text-align: left;
+        width: 100%;
+        opacity: .6;
+    }
+
+    ul {
+        display: flex;
+        margin-top: .5rem;
+
+        a img {
+            width: 1.5rem;
+            height: 1.5rem
+        }
+
+        a {
+            opacity: .3;
+            @include transit;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        li+li {
+            margin-left: .7rem;
+        }
+    }
+}
+
+.endereco {
+    opacity: .6;
+    position: absolute;
+    right: 10%;
+    bottom: 7%;
+    display: flex;
+    align-items: center;
+
+    &::before {
+        content: url('../img/geo.svg');
+        display: block;
+        margin-right: 1rem;
+    }
 }
 
 @keyframes animaColor {
@@ -93,5 +143,42 @@
 
     100% {
         color: $cor-6
+    }
+}
+
+#seta {
+    background: url('../img/arrow.svg');
+    width: 1.8rem;
+    height: 1.8rem;
+    background-size: 1.8rem;
+    position: absolute;
+    bottom: 7%;
+    left: calc(50% - 1rem);
+    animation: animaSeta 2s linear infinite;
+    opacity: .8;
+    display: flex;
+    justify-content: center;
+
+    &::before {
+        content: 'scroll';
+        display: block;
+        color: $cor-4;
+        margin-top: -.8rem;
+        text-align: center;
+        width: 3rem;
+    }
+}
+
+@keyframes animaSeta {
+    0% {
+        transform: translateY(-.5rem);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-.5rem);
     }
 }
