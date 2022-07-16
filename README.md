@@ -1,6 +1,6 @@
-# Canil 🐕 (& catil 🐈)
+# Canil 🐕 
 
-Projeto de landing page de um canil&catil.
+Projeto de landing page de um canil&catil. *(em manutenção)*
 
 Conta com seções de:
 - Qualidades
@@ -12,5 +12,4 @@ Conta com seções de:
 **Acesse o website** : https://aridsm.github.io/canil/  
   *Todas as informações deste website são fictícias*
 
-![página inicial](https://github.com/aridsm/canil/blob/main/page.png)
  
