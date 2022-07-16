@@ -1,6 +1,6 @@
-# Canil 🐕 
+# Canil 🐕 **(em manutenção)**
 
-Projeto de landing page de um canil&catil. **(em manutenção)**
+Projeto de landing page de um canil&catil. 
 
 Conta com seções de:
 - Qualidades
