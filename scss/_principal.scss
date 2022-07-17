@@ -8,7 +8,7 @@
     background-image: url('../img/img-bg-1.webp'), url('../img/img-bg-2.webp'), url('../img/img-bg-3.webp'), url('../img/img-bg-4.webp');
     background-repeat: no-repeat;
     background-position: 10% 20%, 20% 75%, 90% 20%, 80% 75%;
-    background-size: 150px, 150px, 150px, 150px;
+    background-size: 150px;
     margin-top: 4rem;
 
     .balls {
@@ -158,6 +158,7 @@
     opacity: .8;
     display: flex;
     justify-content: center;
+    z-index: 99;
 
     &::before {
         content: 'scroll';

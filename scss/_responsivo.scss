@@ -20,36 +20,37 @@
         transition: 1.5s;
         color: $cor-5;
 
+        a,
+        button {
+            width: 100%;
+            padding: 1rem !important
+        }
+
+        li {
+            margin: 0 !important;
+        }
+
         ul {
             height: 100%;
             flex-direction: column;
         }
 
-        li {
-            width: 100%;
-            margin: 0
+        .btn-padrao:hover {
+            transform: rotate(0);
         }
 
-        a {
-            padding: 5px !important;
-            line-height: 35px;
-            height: 50px;
-            width: 100%;
-            border-radius: 5px;
+        .dropdown-lista {
+            position: relative;
+        }
 
-            &:hover {
-                background: $cor-1
-            }
+        .lista-racas-menu {
+            left: 0;
         }
     }
 
     .js-nav-mobile.ativo {
         transform: translateX(0);
 
-    }
-
-    li+li {
-        margin-top: 20px !important;
     }
 
     .caracteristicas {
@@ -122,7 +123,7 @@
 @media all and (max-width: 1100px) {
     .principal {
         background-position: 3% 20%, 15% 75%, 97% 20%, 85% 75%;
-        background-size: 120px, 120px, 120px, 120px;
+        background-size: 120px;
 
         #ball-3 {
             top: 45%
@@ -170,23 +171,51 @@
         max-width: 420px;
     }
 
-    footer .row-1 {
-        flex-direction: column;
-        text-align: center;
-        margin: 0 auto;
+    .redes-sociais-home {
+        left: 1rem
+    }
 
-        >div+div {
-            margin-left: 0px;
-            margin-top: 50px;
+    .endereco {
+        right: 1rem
+    }
+
+    .principal {
+        background-position: 3% 20%, 15% 75%, 97% 20%, 85% 75%;
+        background-size: 90px;
+
+        #ball-3 {
+            width: 2rem;
+            height: 2rem;
+            left: 85%;
         }
 
-        >div {
+        #ball-2 {
+            width: 1.6rem;
+            height: 1.6rem;
+            top: 75%
+        }
+    }
+
+    footer .row-1 {
+        text-align: center;
+        margin: 0 auto;
+        grid-template-columns: auto;
+        grid-gap: 3.5rem;
+
+        >div,
+        address {
             margin-left: auto !important;
             margin-right: auto;
             text-align: center;
             width: 300px;
         }
+
+        address>* {
+            justify-content: center;
+        }
     }
+
+
 
     .js-scroll-animais {
         grid-auto-columns: 45%;
@@ -197,6 +226,11 @@
 @media all and(max-width: 560px) {
     .container-animais {
         max-width: 200px;
+    }
+
+    .principal {
+        background-image: url('../img/img-bg-4.webp');
+        background-size: 120px;
     }
 
     .raca-item {
@@ -231,5 +265,51 @@
     .js-scroll-animais {
         grid-auto-columns: 99%;
         grid-gap: 1%;
+    }
+
+    #seta {
+        display: none;
+    }
+
+    .endereco {
+        text-align: right;
+
+        &::before {
+            order: 1;
+            margin-right: 0;
+            margin-left: 1rem;
+        }
+    }
+}
+
+@media all and(max-width: 420px) {
+    .endereco {
+        right: 0;
+        left: 0;
+        justify-content: center;
+        text-align: center;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .redes-sociais-home {
+        bottom: initial;
+        left: 30px;
+        top: .5rem;
+
+        ul a img {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+
+        p {
+            display: none;
+        }
+    }
+
+    .txt-principal h1 {
+        font-size: 3.2rem;
     }
 }

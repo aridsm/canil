@@ -60,7 +60,6 @@ header {
         flex-direction: column;
         min-width: 9rem;
         text-align: center;
-        margin-top: -1px;
     }
 
     .dropdown-item a,
@@ -131,5 +130,11 @@ header {
             display: block;
             @extend .barra-menu
         }
+    }
+}
+
+header.scrolled .menu-mobile {
+    .barra-menu {
+        background: $cor-5;
     }
 }

@@ -11,11 +11,15 @@
     background: $cor-1;
     position: absolute;
     top: -2.5rem;
-    right: 0;
+    right: 15px;
     padding: 1rem 2rem;
     border-radius: .2rem;
     color: $cor-5;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+    span {
+      display: flex;
+    }
 
     .tel {
       display: block;
@@ -30,4 +34,14 @@
       bottom: -18px
     }
   }
+}
+
+.tel::before {
+  content: url('../img/telephone.svg');
+  margin-right: .5rem;
+}
+
+.local::before {
+  content: url('../img/geo-white.svg');
+  margin-right: .5rem;
 }

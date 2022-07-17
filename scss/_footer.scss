@@ -5,16 +5,9 @@ footer {
     font-size: 0.875rem;
 
     .row-1 {
-        display: flex;
-        align-items: start;
-
-        >* {
-            flex: 1
-        }
-
-        >div+div {
-            margin-left: 50px;
-        }
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -35,11 +28,11 @@ footer {
 
 .endereco-footer {
     span {
-        display: block
+        display: flex
     }
 
     span+span {
-        margin-top: 5px;
+        margin-top: 15px;
     }
 }
 

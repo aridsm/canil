@@ -113,7 +113,6 @@ function slider() {
     } else {
       slidesPerPage = 4
     }
-    console.log(slidesPerPage)
   }
   setSlidesPerPage()
 
