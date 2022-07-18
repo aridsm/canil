@@ -25,6 +25,18 @@
                 opacity: 1
             }
         }
+
+        @include mediaQuery(m) {
+            margin-top: 20px
+        }
+    }
+
+    @include mediaQuery(m) {
+        flex-direction: column;
+
+        h2 {
+            text-align: center;
+        }
     }
 }
 
@@ -41,6 +53,19 @@
 .container-animais {
     width: 100%;
     overflow: hidden;
+
+    @include mediaQuery(m) {
+        max-width: 640px;
+        margin: 0 auto
+    }
+
+    @include mediaQuery(s) {
+        max-width: 420px;
+    }
+
+    @include mediaQuery(xs) {
+        max-width: 200px;
+    }
 }
 
 .js-scroll-animais {
@@ -53,6 +78,21 @@
     transition: .5s ease-in-out;
     transform: translateX(0);
     cursor: grab;
+
+    @include mediaQuery(m) {
+        grid-auto-columns: 30%;
+        grid-gap: 5%;
+    }
+
+    @include mediaQuery(s) {
+        grid-auto-columns: 45%;
+        grid-gap: 10%;
+    }
+
+    @include mediaQuery(xs) {
+        grid-auto-columns: 99%;
+        grid-gap: 1%;
+    }
 }
 
 .card {
@@ -127,4 +167,9 @@
     font-size: 1.25rem;
     display: table;
     margin-left: auto;
+
+    @include mediaQuery(m) {
+        margin-right: auto;
+        margin-left: auto;
+    }
 }

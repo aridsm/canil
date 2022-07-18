@@ -18,18 +18,64 @@ $cor-8: #F49A94;
     transition: all 0.2s ease-out
 }
 
+@mixin mediaQuery($device) {
+    @if $device ==xl {
+        @media (min-width: 1600px) {
+            @content;
+        }
+    }
+
+    @else if $device ==l {
+        @media (max-width: 1100px) {
+            @content;
+        }
+    }
+
+    @else if $device ==m {
+        @media (max-width: 920px) {
+            @content;
+        }
+    }
+
+    @else if $device ==s {
+        @media (max-width: 700px) {
+            @content;
+        }
+    }
+
+    @else if $device ==xs {
+        @media (max-width: 560px) {
+            @content;
+        }
+    }
+
+    @else if $device ==xxs {
+        @media (max-width: 420px) {
+            @content;
+        }
+    }
+}
+
 body {
     background: radial-gradient(100% 100% at 50% 0%, $cor-5 0%, $cor-3 100%);
     font-family: 'Raleway', sans-serif;
     color: $cor-4;
     font-size: 14px;
+
+    @include mediaQuery(xl) {
+        font-size: 16px;
+    }
 }
 
 .container {
     max-width: 890px;
     margin: 0 auto;
     padding: 0 15px;
-    width: 100%
+    width: 100%;
+
+    @include mediaQuery(xl) {
+        max-width: 1050px;
+    }
 }
 
 ul {

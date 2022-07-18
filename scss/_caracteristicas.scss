@@ -9,6 +9,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include mediaQuery(m) {
+            flex-direction: column;
+        }
     }
 
     li {
@@ -17,6 +21,11 @@
 
     li+li {
         margin-left: 100px;
+
+        @include mediaQuery(m) {
+            margin-left: 0;
+            padding-top: 30px;
+        }
     }
 
     img {

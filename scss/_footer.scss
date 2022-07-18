@@ -8,6 +8,23 @@ footer {
         display: grid;
         grid-gap: 1rem;
         grid-template-columns: repeat(4, 1fr);
+
+        @include mediaQuery(s) {
+            text-align: center;
+            margin: 0 auto;
+            grid-template-columns: auto;
+            grid-gap: 3.5rem;
+            width: 300px
+        }
+    }
+
+    @include mediaQuery(xl) {
+        font-size: 16px;
+    }
+
+
+    @include mediaQuery(xs) {
+        font-size: 0.75rem;
     }
 }
 
@@ -28,11 +45,22 @@ footer {
 
 .endereco-footer {
     span {
-        display: flex
+        display: flex;
+
+        @include mediaQuery(s) {
+            justify-content: center;
+        }
     }
 
     span+span {
         margin-top: 15px;
+    }
+
+    @include mediaQuery(s) {
+        margin-left: auto !important;
+        margin-right: auto;
+        text-align: center;
+        width: 300px;
     }
 }
 

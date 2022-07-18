@@ -37,6 +37,21 @@ header {
         position: relative;
     }
 
+    .dropdown-btn {
+        &::after {
+            content: '▼';
+            position: absolute;
+            right: -.1rem;
+            font-size: .7rem;
+        }
+    }
+
+    .sub-btn {
+        &::after {
+            right: 1rem;
+        }
+    }
+
     .lista-menu>li>a,
     .lista-menu>.dropdown-item>button {
         padding: 6px 15px;
@@ -96,8 +111,12 @@ header {
     height: 1.3rem;
     display: none;
 
+    @include mediaQuery(m) {
+        display: block;
+    }
+
     &.ativo {
-        .barra-menu {
+        & .barra-menu {
             transform: rotate(45deg);
             transition: 1s;
 
@@ -109,7 +128,7 @@ header {
         }
     }
 
-    .barra-menu {
+    & .barra-menu {
         width: 100%;
         height: 3px;
         background: $cor-1;
@@ -136,5 +155,52 @@ header {
 header.scrolled .menu-mobile {
     .barra-menu {
         background: $cor-5;
+    }
+}
+
+.js-nav-mobile {
+    @include mediaQuery(m) {
+        transform: translateX(100vw);
+        position: absolute;
+        background-color: $cor-2;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        min-height: calc(100vh - 60px);
+        padding: 0 15px 30px 15px;
+        text-align: center;
+        transition: 1.5s;
+        color: $cor-5;
+
+        & a,
+        & button {
+            width: 100%;
+            padding: 1rem !important
+        }
+
+        & li {
+            margin: 0 !important;
+        }
+
+        & ul {
+            height: 100%;
+            flex-direction: column;
+        }
+
+        & .btn-padrao:hover {
+            transform: rotate(0);
+        }
+
+        & .dropdown-lista {
+            position: relative;
+        }
+
+        & .lista-racas-menu {
+            left: 0;
+        }
+
+        &.ativo {
+            transform: translateX(0);
+        }
     }
 }

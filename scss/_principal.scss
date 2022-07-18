@@ -11,42 +11,90 @@
     background-size: 150px;
     margin-top: 4rem;
 
-    .balls {
+    & .balls {
         border-radius: 50%;
         position: absolute;
     }
 
-    #ball-1 {
+    & #ball-1 {
         width: 2rem;
         height: 2rem;
         background: $cor-7;
         left: 7%;
-        top: 50%
+        top: 50%;
+
+        @include mediaQuery(xs) {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
     }
 
-    #ball-2 {
+    & #ball-2 {
         background: $cor-6;
         width: 2.7rem;
         height: 2.7rem;
         left: 40%;
-        top: 80%
+        top: 80%;
+
+        @include mediaQuery(s) {
+            width: 1.6rem;
+            height: 1.6rem;
+            top: 75%
+        }
     }
 
 
-    #ball-3 {
+    & #ball-3 {
         background: $cor-8;
         width: 4rem;
         height: 4rem;
         left: 90%;
-        top: 65%
+        top: 65%;
+
+        @include mediaQuery(l) {
+            top: 45%;
+        }
+
+        @include mediaQuery(s) {
+            width: 2rem;
+            height: 2rem;
+            left: 85%;
+        }
+
+        @include mediaQuery(xs) {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
     }
 
-    #ball-4 {
+    & #ball-4 {
         width: 1.6rem;
         height: 1.6rem;
         background-color: $cor-1;
         left: 60%;
-        top: 7%
+        top: 7%;
+
+        @include mediaQuery(xs) {
+            top: 13%;
+        }
+    }
+
+    @include mediaQuery(xl) {
+        background-size: 200px;
+    }
+
+    @include mediaQuery(l) {
+        background-position: 3% 20%, 15% 75%, 97% 20%, 85% 75%;
+        background-size: 120px;
+    }
+
+    @include mediaQuery(s) {
+        background-position: 3% 20%, 15% 75%, 97% 20%, 85% 75%;
+        background-size: 90px;
+    }
+
+    @include mediaQuery(xs) {
+        background-image: none;
     }
 }
 
@@ -56,13 +104,13 @@
     text-align: center;
     margin-top: -4rem;
 
-    p {
+    & p {
         margin: 1rem auto 2rem auto;
         width: 50%;
         color: $cor-4
     }
 
-    h1 {
+    & h1 {
         font-size: 6rem;
         line-height: 1;
         font-weight: 400;
@@ -70,9 +118,21 @@
         font-family: "Caveat Brush", serif;
         letter-spacing: -5px;
 
-        span {
+        & span {
             color: $cor-1;
             //   animation: animaColor 10s infinite forwards;
+        }
+
+        @include mediaQuery(xl) {
+            font-size: 7rem;
+        }
+
+        @include mediaQuery(m) {
+            font-size: 4rem;
+        }
+
+        @include mediaQuery(xxs) {
+            font-size: 3.2rem;
         }
     }
 
@@ -83,22 +143,31 @@
     bottom: 7%;
     left: 10%;
 
-    p {
+    & p {
         text-align: left;
         width: 100%;
         opacity: .8;
+
+        @include mediaQuery(xxs) {
+            display: none;
+        }
     }
 
-    ul {
+    & ul {
         display: flex;
         margin-top: .5rem;
 
-        a img {
+        & a img {
             width: 1.5rem;
-            height: 1.5rem
+            height: 1.5rem;
+
+            @include mediaQuery(xxs) {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
         }
 
-        a {
+        & a {
             opacity: .5;
             @include transit;
 
@@ -107,9 +176,19 @@
             }
         }
 
-        li+li {
+        & li+li {
             margin-left: .7rem;
         }
+    }
+
+    @include mediaQuery(s) {
+        left: 1rem
+    }
+
+    @include mediaQuery(xxs) {
+        bottom: initial;
+        left: 30px;
+        top: .5rem;
     }
 }
 
@@ -125,6 +204,31 @@
         content: url('../img/geo.svg');
         display: block;
         margin-right: 1rem;
+
+        @include mediaQuery(xs) {
+            order: 1;
+            margin-right: 0;
+            margin-left: 1rem;
+        }
+
+        @include mediaQuery(xxs) {
+            display: none;
+        }
+    }
+
+    @include mediaQuery(s) {
+        right: 1rem
+    }
+
+    @include mediaQuery(xs) {
+        text-align: right;
+    }
+
+    @include mediaQuery(xxs) {
+        right: 0;
+        left: 0;
+        justify-content: center;
+        text-align: center;
     }
 }
 
@@ -167,6 +271,10 @@
         margin-top: -.8rem;
         text-align: center;
         width: 3rem;
+    }
+
+    @include mediaQuery(xs) {
+        display: none;
     }
 }
 

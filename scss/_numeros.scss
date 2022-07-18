@@ -25,5 +25,13 @@
                 margin-right: 15px
             }
         }
+
+        @include mediaQuery(m) {
+            flex-direction: column;
+
+            div+div {
+                margin-top: 30px;
+            }
+        }
     }
 }

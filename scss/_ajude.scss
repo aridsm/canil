@@ -6,7 +6,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 70px
+        margin-top: 70px;
+
+        @include mediaQuery(m) {
+            flex-direction: column;
+        }
     }
 
     img {
@@ -25,6 +29,11 @@
     }
 
     a+a {
-        margin-left: 100px
+        margin-left: 100px;
+
+        @include mediaQuery(m) {
+            margin-left: 0;
+            padding-top: 30px;
+        }
     }
 }
