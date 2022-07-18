@@ -120,7 +120,6 @@
 
         & span {
             color: $cor-1;
-            //   animation: animaColor 10s infinite forwards;
         }
 
         @include mediaQuery(xl) {
@@ -187,7 +186,7 @@
 
     @include mediaQuery(xxs) {
         bottom: initial;
-        left: 30px;
+        left: 15px;
         top: .5rem;
     }
 }
@@ -229,24 +228,6 @@
         left: 0;
         justify-content: center;
         text-align: center;
-    }
-}
-
-@keyframes animaColor {
-    0% {
-        color: $cor-6;
-    }
-
-    33% {
-        color: $cor-7
-    }
-
-    66% {
-        color: $cor-1
-    }
-
-    100% {
-        color: $cor-6
     }
 }
 
