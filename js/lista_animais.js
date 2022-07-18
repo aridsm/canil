@@ -50,21 +50,3 @@ const animais = [
 ]
 
 export default animais
-
-/*
-<a class="item-animais" href="#">
-                                <p class="nome-animal">Pluto</p>
-                                <img src="img/anima1.webp" alt="Pluto">
-                                <div class="descricao-animais">
-                                    <span>
-                                        <p class="raca">SRD</p>
-                                        <p>Macho</p>
-                                    </span>
-                                    <p class="descricao">Etiam sit amet nunc sed mauris laoreet molestie in id eros.</p>
-                                    <span>
-                                        <p>Idade</p>
-                                        <p>2 anos</p>
-                                    </span>
-                                </div>
-                            </a>
-                            */
