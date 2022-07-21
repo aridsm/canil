@@ -162,11 +162,10 @@
 
 .todos-os-animais {
     margin-top: 45px;
-    color: $cor-5;
-    font-family: "Caveat Brush", serif;
-    font-size: 1.25rem;
-    display: table;
     margin-left: auto;
+    display: table;
+    background-color: $cor-5;
+    color: $cor-2;
 
     @include mediaQuery(m) {
         margin-right: auto;
