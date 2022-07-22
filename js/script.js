@@ -79,22 +79,14 @@ function slider() {
   }
 
   let inicio_X;
-  let atual_X;
-  let final_X;
-  let distanceDragged;
-
-  function draggingSlider(e) {
-    if (e.x === 0) return;
-    atual_X = e.x;
-    distanceDragged = atual_X - inicio_X;
-  }
 
   function startDrag(e) {
-    inicio_X = e.x
+    inicio_X = e.x || e.changedTouches[0].pageX;
   }
 
-  function endDrag() {
-    final_X = distanceDragged;
+  function endDrag(e) {
+    const final_X = e.x || e.changedTouches[0].pageX;
+    const distanceDragged = final_X - inicio_X;
     if (distanceDragged > 0) {
       previousSlide()
     } else {
@@ -121,7 +113,8 @@ function slider() {
 
   window.addEventListener('resize', setSlidesPerPage)
   containerAnimais.addEventListener('dragstart', startDrag)
-  containerAnimais.addEventListener('drag', draggingSlider)
+  containerAnimais.addEventListener('touchstart', startDrag)
+  containerAnimais.addEventListener('touchend', endDrag)
   containerAnimais.addEventListener('dragend', endDrag)
 }
 slider()
