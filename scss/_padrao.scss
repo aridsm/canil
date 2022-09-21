@@ -1,167 +1,163 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-$cor-1: #E15747;
-$cor-2: #AA3D31;
+$cor-1: #e15747;
+$cor-2: #aa3d31;
 $cor-3: #e6e1e1;
 $cor-4: #282525;
-$cor-5: #FCFAFA;
-$cor-6: #01C381;
-$cor-7: #E3AE3C;
-$cor-8: #F49A94;
-
+$cor-5: #fcfafa;
+$cor-6: #01c381;
+$cor-7: #e3ae3c;
+$cor-8: #f49a94;
 
 @mixin transit {
-    transition: all 0.2s ease-out
+  transition: all 0.1s ease-out;
 }
 
 @mixin mediaQuery($device) {
-    @if $device ==xl {
-        @media (min-width: 1600px) {
-            @content;
-        }
+  @if $device ==xl {
+    @media (min-width: 1600px) {
+      @content;
     }
-
-    @else if $device ==l {
-        @media (max-width: 1100px) {
-            @content;
-        }
+  } @else if $device == heightX {
+    @media (min-width: 1300px) and (min-height: 750px) {
+      @content;
     }
-
-    @else if $device ==m {
-        @media (max-width: 920px) {
-            @content;
-        }
+  } @else if $device == heightM {
+    @media (max-width: 1300px) and (min-height: 750px) {
+      @content;
     }
-
-    @else if $device ==s {
-        @media (max-width: 700px) {
-            @content;
-        }
+  } @else if $device ==l {
+    @media (max-width: 1100px) {
+      @content;
     }
-
-    @else if $device ==xs {
-        @media (max-width: 560px) {
-            @content;
-        }
+  } @else if $device ==m {
+    @media (max-width: 920px) {
+      @content;
     }
-
-    @else if $device ==xxs {
-        @media (max-width: 420px) {
-            @content;
-        }
+  } @else if $device ==s {
+    @media (max-width: 700px) {
+      @content;
     }
+  } @else if $device ==xs {
+    @media (max-width: 560px) {
+      @content;
+    }
+  } @else if $device ==xxs {
+    @media (max-width: 420px) {
+      @content;
+    }
+  }
 }
 
 body {
-    background: radial-gradient(100% 100% at 50% 0%, $cor-5 0%, $cor-3 100%);
-    font-family: 'Raleway', sans-serif;
-    color: $cor-4;
-    font-size: 14px;
+  background: radial-gradient(100% 100% at 50% 0%, $cor-5 0%, $cor-3 100%);
+  font-family: "Raleway", sans-serif;
+  color: $cor-4;
+  font-size: 14px;
 
-    @include mediaQuery(xl) {
-        font-size: 16px;
-    }
+  @include mediaQuery(xl) {
+    font-size: 16px;
+  }
 }
 
 .container {
-    max-width: 890px;
-    margin: 0 auto;
-    padding: 0 15px;
-    width: 100%;
+  max-width: 890px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
 
-    @include mediaQuery(xl) {
-        max-width: 1050px;
-    }
+  @include mediaQuery(xl) {
+    max-width: 1050px;
+  }
 }
 
 ul {
-    padding: 0
+  padding: 0;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    display: inline-block;
-    text-decoration: none;
-    color: inherit;
-    font-size: inherit;
-    font-family: inherit
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
 }
 
 button {
-    display: block;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    cursor: pointer;
-    color: inherit;
-    font-size: inherit;
-    font-family: inherit;
+  display: block;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
 }
 
 h2 {
-    font-size: 2.25rem;
-    font-family: "Caveat Brush", serif;
-    font-weight: 400;
+  font-size: 2.25rem;
+  font-family: "Caveat Brush", serif;
+  font-weight: 400;
 }
 
 address {
-    font-style: normal;
+  font-style: normal;
 }
 
 .container-geral {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .btn-padrao {
-    background: $cor-1;
-    padding: .7rem 1.7rem;
-    color: $cor-5;
-    font-weight: 600;
-    border-radius: .2rem;
-    letter-spacing: .8px;
-    @include transit;
+  background: $cor-1;
+  padding: 0.7rem 1.5rem;
+  color: $cor-5;
+  font-weight: 600;
+  border-radius: 0.2rem;
+  @include transit;
 
-    &:hover {
-        transform: scale(1.1);
-        box-shadow: 0 0 20px 0 #aa3d311e;
-    }
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px 0 #aa3d311e;
+  }
 }
 
 .js-scroll {
-    opacity: 0;
-    transform: translateY(-30px);
-    transition: all 0.5s ease
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 0.5s ease;
 }
 
 .js-scroll.anima-scroll {
-    transform: translateY(0px);
-    opacity: 1;
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: $cor-3;
+  background: $cor-3;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: $cor-1;
+  background: $cor-1;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: $cor-2;
+  background: $cor-2;
 }
 
 ::selection {
-    background: $cor-7;
-    color: $cor-5
+  background: $cor-7;
+  color: $cor-5;
 }

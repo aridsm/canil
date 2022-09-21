@@ -1,274 +1,273 @@
 .principal {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 4rem);
-    padding: 4rem 0;
-    background-image: url('../img/img-bg-1.webp'), url('../img/img-bg-2.webp'), url('../img/img-bg-3.webp'), url('../img/img-bg-4.webp');
-    background-repeat: no-repeat;
-    background-position: 10% 20%, 20% 75%, 90% 20%, 80% 75%;
-    background-size: 150px;
-    margin-top: 4rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 4rem);
+  padding: 4rem 0;
+  background-image: url("../img/img-bg-1.webp"), url("../img/img-bg-2.webp"),
+    url("../img/img-bg-3.webp"), url("../img/img-bg-4.webp");
+  background-repeat: no-repeat;
+  background-position: 10% 20%, 20% 75%, 90% 20%, 80% 75%;
+  background-size: 160px;
+  margin-top: 4rem;
 
-    & .balls {
-        border-radius: 50%;
-        position: absolute;
+  & .balls {
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  & #ball-1 {
+    width: 2rem;
+    height: 2rem;
+    background: $cor-7;
+    left: 7%;
+    top: 50%;
+
+    @include mediaQuery(xs) {
+      width: 1.2rem;
+      height: 1.2rem;
     }
+  }
 
-    & #ball-1 {
-        width: 2rem;
-        height: 2rem;
-        background: $cor-7;
-        left: 7%;
-        top: 50%;
+  & #ball-2 {
+    background: $cor-6;
+    width: 2.7rem;
+    height: 2.7rem;
+    left: 40%;
+    top: 80%;
 
-        @include mediaQuery(xs) {
-            width: 1.2rem;
-            height: 1.2rem;
-        }
+    @include mediaQuery(s) {
+      width: 1.6rem;
+      height: 1.6rem;
+      top: 75%;
     }
+  }
 
-    & #ball-2 {
-        background: $cor-6;
-        width: 2.7rem;
-        height: 2.7rem;
-        left: 40%;
-        top: 80%;
-
-        @include mediaQuery(s) {
-            width: 1.6rem;
-            height: 1.6rem;
-            top: 75%
-        }
-    }
-
-
-    & #ball-3 {
-        background: $cor-8;
-        width: 4rem;
-        height: 4rem;
-        left: 90%;
-        top: 65%;
-
-        @include mediaQuery(l) {
-            top: 45%;
-        }
-
-        @include mediaQuery(s) {
-            width: 2rem;
-            height: 2rem;
-            left: 85%;
-        }
-
-        @include mediaQuery(xs) {
-            width: 1.2rem;
-            height: 1.2rem;
-        }
-    }
-
-    & #ball-4 {
-        width: 1.6rem;
-        height: 1.6rem;
-        background-color: $cor-1;
-        left: 60%;
-        top: 7%;
-
-        @include mediaQuery(xs) {
-            top: 13%;
-        }
-    }
-
-    @include mediaQuery(xl) {
-        background-size: 200px;
-    }
+  & #ball-3 {
+    background: $cor-8;
+    width: 4rem;
+    height: 4rem;
+    left: 90%;
+    top: 65%;
 
     @include mediaQuery(l) {
-        background-position: 3% 20%, 15% 75%, 97% 20%, 85% 75%;
-        background-size: 120px;
+      top: 45%;
     }
 
     @include mediaQuery(s) {
-        background-position: 3% 20%, 15% 75%, 97% 20%, 85% 75%;
-        background-size: 90px;
+      width: 2rem;
+      height: 2rem;
+      left: 85%;
     }
 
     @include mediaQuery(xs) {
-        background-image: none;
+      width: 1.2rem;
+      height: 1.2rem;
     }
+  }
+
+  & #ball-4 {
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: $cor-1;
+    left: 60%;
+    top: 7%;
+
+    @include mediaQuery(xs) {
+      top: 13%;
+    }
+  }
+
+  @include mediaQuery(xl) {
+    background-size: 200px;
+  }
+
+  @include mediaQuery(l) {
+    background-position: 3% 20%, 15% 75%, 97% 20%, 85% 75%;
+    background-size: 120px;
+  }
+
+  @include mediaQuery(s) {
+    background-position: 3% 20%, 15% 75%, 97% 20%, 85% 75%;
+    min-height: 600px;
+    background-size: 90px;
+  }
+
+  @include mediaQuery(xs) {
+    background-image: none;
+  }
+
+  @include mediaQuery(heightX) {
+    min-height: 800px;
+  }
+
+  @include mediaQuery(heightM) {
+    background-size: 15vh;
+  }
 }
 
 .txt-principal {
-    z-index: 2;
-    color: $cor-2;
-    text-align: center;
-    margin-top: -4rem;
+  z-index: 2;
+  color: $cor-2;
+  text-align: center;
+  margin-top: -4rem;
 
-    & p {
-        margin: 1rem auto 2rem auto;
-        width: 50%;
-        color: $cor-4
+  & p {
+    margin: 1rem auto 2rem auto;
+    width: 50%;
+    color: $cor-4;
+  }
+
+  & h1 {
+    font-size: 6rem;
+    line-height: 1;
+    font-weight: 400;
+    color: $cor-4;
+    font-family: "Caveat Brush", serif;
+    letter-spacing: -5px;
+
+    & span {
+      color: $cor-1;
     }
 
-    & h1 {
-        font-size: 6rem;
-        line-height: 1;
-        font-weight: 400;
-        color: $cor-4;
-        font-family: "Caveat Brush", serif;
-        letter-spacing: -5px;
-
-        & span {
-            color: $cor-1;
-        }
-
-        @include mediaQuery(xl) {
-            font-size: 7rem;
-        }
-
-        @include mediaQuery(m) {
-            font-size: 4rem;
-        }
-
-        @include mediaQuery(xxs) {
-            font-size: 3.2rem;
-        }
+    @include mediaQuery(xl) {
+      font-size: 7rem;
     }
 
+    @include mediaQuery(m) {
+      font-size: 5rem;
+    }
+  }
 }
 
 .redes-sociais-home {
-    position: absolute;
-    bottom: 7%;
-    left: 10%;
+  position: absolute;
+  bottom: 7%;
+  left: 10%;
 
-    & p {
-        text-align: left;
-        width: 100%;
-        opacity: .8;
-
-        @include mediaQuery(xxs) {
-            display: none;
-        }
-    }
-
-    & ul {
-        display: flex;
-        margin-top: .5rem;
-
-        & a img {
-            width: 1.5rem;
-            height: 1.5rem;
-
-            @include mediaQuery(xxs) {
-                width: 1.2rem;
-                height: 1.2rem;
-            }
-        }
-
-        & a {
-            opacity: .5;
-            @include transit;
-
-            &:hover {
-                opacity: 1;
-            }
-        }
-
-        & li+li {
-            margin-left: .7rem;
-        }
-    }
-
-    @include mediaQuery(s) {
-        left: 1rem
-    }
+  & p {
+    text-align: left;
+    width: 100%;
+    opacity: 0.8;
 
     @include mediaQuery(xxs) {
-        bottom: initial;
-        left: 15px;
-        top: .5rem;
+      display: none;
     }
+  }
+
+  & ul {
+    display: flex;
+    margin-top: 0.5rem;
+
+    & a img {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    & a {
+      opacity: 0.5;
+      @include transit;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    & li + li {
+      margin-left: 0.7rem;
+    }
+  }
+
+  @include mediaQuery(s) {
+    left: 1rem;
+  }
+
+  @include mediaQuery(xxs) {
+    bottom: initial;
+    left: 15px;
+    top: 0.5rem;
+  }
 }
 
 .endereco {
-    opacity: .8;
-    position: absolute;
-    right: 10%;
-    bottom: 7%;
-    display: flex;
-    align-items: center;
+  opacity: 0.8;
+  position: absolute;
+  right: 10%;
+  bottom: 7%;
+  display: flex;
+  align-items: center;
 
-    &::before {
-        content: url('../img/geo.svg');
-        display: block;
-        margin-right: 1rem;
-
-        @include mediaQuery(xs) {
-            order: 1;
-            margin-right: 0;
-            margin-left: 1rem;
-        }
-
-        @include mediaQuery(xxs) {
-            display: none;
-        }
-    }
-
-    @include mediaQuery(s) {
-        right: 1rem
-    }
+  &::before {
+    content: url("../img/geo.svg");
+    display: block;
+    margin-right: 1rem;
 
     @include mediaQuery(xs) {
-        text-align: right;
+      order: 1;
+      margin-right: 0;
+      margin-left: 1rem;
     }
 
     @include mediaQuery(xxs) {
-        right: 0;
-        left: 0;
-        justify-content: center;
-        text-align: center;
+      display: none;
     }
+  }
+
+  @include mediaQuery(s) {
+    right: 1rem;
+  }
+
+  @include mediaQuery(xs) {
+    text-align: right;
+  }
+
+  @include mediaQuery(xxs) {
+    right: 0;
+    left: 0;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 #seta {
-    background: url('../img/arrow.svg');
-    width: 1.8rem;
-    height: 1.8rem;
-    background-size: 1.8rem;
-    position: absolute;
-    bottom: 7%;
-    left: calc(50% - 1rem);
-    animation: animaSeta 2s linear infinite;
-    opacity: .8;
-    display: flex;
-    justify-content: center;
-    z-index: 99;
+  background: url("../img/arrow.svg");
+  width: 1.8rem;
+  height: 1.8rem;
+  background-size: 1.8rem;
+  position: absolute;
+  bottom: 7%;
+  left: calc(50% - 1rem);
+  animation: animaSeta 2s linear infinite;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  z-index: 99;
 
-    &::before {
-        content: 'scroll';
-        display: block;
-        color: $cor-4;
-        margin-top: -.8rem;
-        text-align: center;
-        width: 3rem;
-    }
+  &::before {
+    content: "scroll";
+    display: block;
+    color: $cor-4;
+    margin-top: -0.8rem;
+    text-align: center;
+    width: 3rem;
+  }
 
-    @include mediaQuery(xs) {
-        display: none;
-    }
+  @include mediaQuery(xs) {
+    display: none;
+  }
 }
 
 @keyframes animaSeta {
-    0% {
-        transform: translateY(-.5rem);
-    }
+  0% {
+    transform: translateY(-0.5rem);
+  }
 
-    50% {
-        transform: translateY(0);
-    }
+  50% {
+    transform: translateY(0);
+  }
 
-    100% {
-        transform: translateY(-.5rem);
-    }
+  100% {
+    transform: translateY(-0.5rem);
+  }
 }
